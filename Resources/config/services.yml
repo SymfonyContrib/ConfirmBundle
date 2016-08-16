@@ -6,4 +6,3 @@ services:
         class: %confirm.form.class%
         tags:
             - name: form.type
-              alias: confirm_form

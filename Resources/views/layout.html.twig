@@ -1,1 +1,10 @@
 {% extends "::base.html.twig" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block body %}
+    <h1>{% block confirm_bundle_page_title %}{% endblock %}</h1>
+    {% block confirm_bundle_content %}{% endblock %}
+{% endblock %}

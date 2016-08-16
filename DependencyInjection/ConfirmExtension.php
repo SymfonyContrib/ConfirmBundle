@@ -54,25 +54,23 @@ class ConfirmExtension extends Extension implements PrependExtensionInterface
     private function configureTwigBundle(ContainerBuilder $container)
     {
         // Get the twig configurations.
-        $name = 'twig';
+        $name    = 'twig';
         $configs = $container->getExtensionConfig($name);
 
         // Find any existing configurations and add to it them so when the
         // configs are merged they do not overwrite each other.
         foreach ($configs as $config) {
-            if (isset($config['form'])) {
-                $formConfig = ['form' => $config['form']];
+            if (isset($config['form_themes'])) {
+                $formConfig = ['form_themes' => $config['form_themes']];
             }
         }
 
         // Update or create the configuration.
         if (!empty($formConfig)) {
-            $formConfig['form']['resources'][] = $this->formTemplate;
+            $formConfig['form_themes'][] = $this->formTemplate;
         } else {
             $formConfig = [
-                'form' => [
-                    'resources' => [$this->formTemplate]
-                ]
+                'form_themes' => [$this->formTemplate],
             ];
         }
 

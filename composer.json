@@ -1,6 +1,6 @@
 {
     "name": "symfonycontrib/confirm-bundle",
-    "description": "Symfony2 confirmation form bundle.",
+    "description": "Symfony confirmation form bundle.",
     "keywords": ["form"],
     "homepage": "http://symfonycontrib.com",
     "license": "MIT",
@@ -12,11 +12,15 @@
         }
     ],
     "require": {
-        "php": ">=5.4",
-        "symfony/symfony": "~2.3"
+        "php": ">=5.9",
+        "symfony/symfony": "^3.1"
     },
     "autoload": {
-        "psr-0": { "SymfonyContrib\\Bundle\\ConfirmBundle\\": "" }
+        "psr-4": { "SymfonyContrib\\Bundle\\ConfirmBundle\\": "" }
     },
-    "target-dir": "SymfonyContrib/Bundle/ConfirmBundle"
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        }
+    }
 }
