@@ -3,6 +3,6 @@ parameters:
 
 services:
     confirm.form:
-        class: %confirm.form.class%
+        class: "%confirm.form.class%"
         tags:
             - name: form.type
